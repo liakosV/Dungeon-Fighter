@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { ISourceOptions } from '@tsparticles/engine'
-import { BackgroundImgComponent } from '../background-img/background-img.component';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
-  imports: [BackgroundImgComponent, RouterModule],
+  imports: [RouterModule],
 
 })
 export class LoginComponent {
