@@ -1,0 +1,11 @@
+#town {
+  background-image: url('../../../assets/Town.jpg');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 98vh;
+  min-height: calc(100vh - 57.33px - 100px );
+  border: 8px solid black;
+  margin-left: 0px;
+  margin-top: 8px;
+}
