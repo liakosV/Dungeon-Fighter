@@ -1,0 +1,105 @@
+  <div class="container">
+    <div class="d-flex justify-content-center align-items-center vh-100">
+      <div class="text-center">
+
+        <fieldset class="border border-3 rounded-4 position-relative p-4 text-white bg-dark bg-opacity-50">
+
+          <legend class="float-none w-auto px-0 text-white">
+            <h1>Sign-Up</h1>
+          </legend>
+
+          <form [formGroup]="form" class="d-flex flex-column align-items-center">
+            <div class="gap-4 d-flex mb-3 flex-column">
+              <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input type="text" matInput formControlName="username">
+                <mat-error>Username is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="text" matInput formControlName="email">
+                <mat-error>Email is required</mat-error>
+              </mat-form-field>
+          
+              <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password" [type]="hide() ? 'password' : 'text'" >
+                <button
+                  mat-icon-button
+                  matSuffix
+                  (click)="clickEvent($event)"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide()"
+                >
+                <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error>Password is required</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                <mat-label>Confirm Password</mat-label>
+                <input type="password" matInput formControlName="confirmPassword" [type]="hide() ? 'password' : 'text'" >
+                <button
+                  mat-icon-button
+                  matSuffix
+                  (click)="clickEvent($event)"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide()"
+                >
+                <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                @if (form.get("confirmPassword")?.hasError("notSame")) {
+                  <mat-error>Password is not matching</mat-error>
+                }
+                @else {
+                  <mat-error>Confirm Password is missing or is not valid</mat-error>
+                }
+                
+              </mat-form-field>
+            </div>
+          </form>
+          
+        
+          <!-- <div class="row text-start my-3">
+              <fieldset class="col border border-1 rounded p-1 position-relative mx-2">
+                <legend class="float-none w-auto">Username</legend>
+                <input type="text" class="text-white form-control bg-transparent rounded shadow-none border-0 fs-5" formControlName="username">
+              </fieldset>
+              <fieldset class="col border border-1 rounded p-1 position-relative mx-2">
+                <legend class="float-none w-auto">Email</legend>
+                <input type="text" class="text-white form-control bg-transparent rounded shadow-none border-0 fs-5" formControlName="email">
+              </fieldset>
+            </div>
+
+            <div class="row text-start my-3">
+              <fieldset class="col border border-1 rounded p-1 position-relative mx-2">
+                <legend class="float-none w-auto">Password</legend>
+                <input type="password" class="text-white form-control bg-transparent rounded shadow-none border-0 fs-5" formControlName="password">
+              </fieldset>
+              <fieldset class="col border border-1 rounded p-1 position-relative mx-2">
+                <legend class="float-none w-auto">Confirm Password</legend>
+                <input type="password" class="text-white form-control bg-transparent rounded shadow-none border-0 fs-5" formControlName="confirmPassword">
+              </fieldset>
+            </div>
+
+            <div class="row text-start my-3">
+                <fieldset class="col border border-1 rounded p-1 position-relative mx-2">
+                  <legend class="float-none w-auto">Age</legend>
+                  <input type="number" class="text-white form-control bg-transparent rounded shadow-none border-0 fs-5" formControlName="age">
+                </fieldset>            
+                <fieldset class="col border border-1 rounded p-1 position-relative mx-2">
+                  <legend class="float-none w-auto">Phone</legend>
+                  <input type="text" class="text-white form-control bg-transparent rounded shadow-none border-0 fs-5" formControlName="phone">
+                </fieldset>
+            </div> -->
+
+          <!-- <div class="mt-5">
+            <button class="rounded-4 bg-dark bg-opacity-50 text-success fs-4 w-25" (click)="onSubmit()">Sign Up</button>
+            <button (click)="onSetValue()">Set value</button>
+            <hr>
+            <span>You already have an acount? <a routerLink="/login">Login!</a></span>
+          </div> -->
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  

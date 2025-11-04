@@ -1,0 +1,30 @@
+#offset {
+  margin-left: 30%;
+}
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.map-zone {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  /* border: 5px solid black; */
+  
+}
+
+.hover-label {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  pointer-events: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  z-index: 999;
+  transform: translate(10px, -50%);
+  white-space: nowrap;
+}

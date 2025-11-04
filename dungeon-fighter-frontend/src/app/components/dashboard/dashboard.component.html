@@ -1,0 +1,59 @@
+<!-- <div class="">
+  <div id="town" class="">
+    
+  </div>
+</div> -->
+
+<!-- <div class="container-fluid h-100">
+  <div class="d-flex justify-content-end">
+    <div class="border border-dark border-4">
+      <img src="/assets/map.jpg" alt="Town Map" class="img-fluid" style="max-width: 100%;">
+    </div>
+    
+  </div>
+</div> -->
+
+<div class="container-fluid h-100">
+  <div class="row h-100">
+    <div class="col-8 d-flex align-items-center justify-content-center" id="offset">
+      <div class="border border-5 border-dark w-100">
+        <img src="assets/map.jpg" alt="Town Map" class="img-fluid w-100" />
+
+        <div 
+          class="map-zone rounded-top-circle"
+          (click)="onZoneClick('tavern')"
+          (mousemove)="onMouseMove($event)"
+          (mouseenter)="onHoverZone('tavern', $event)"
+          (mouseleave)="onLeaveZone()"
+          style="top: 18%; left: 41%; width: 22.5%; height: 35%;"
+        >
+        </div>
+      
+        <div 
+            class="map-zone rounded-top-5"
+            (click)="onZoneClick('dungeon')"
+            (mousemove)="onMouseMove($event)"
+            (mouseenter)="onHoverZone('dungeon', $event)"
+            (mouseleave)="onLeaveZone()"
+            style="top: 61%; left: 40%; width: 16%; height: 28%; transform: rotate(35deg); "
+          >
+        </div>
+        <div 
+            class="map-zone rounded-top-circle"
+            (click)="onZoneClick('shop')"
+            (mousemove)="onMouseMove($event)"
+            (mouseenter)="onHoverZone('shop', $event)"
+            (mouseleave)="onLeaveZone()"
+            style="top: 34.7%; left: 75%; width: 16%; height: 32%; transform: rotate(0deg); "
+          >
+        </div>
+        <div
+          class="hover-label"
+          *ngIf="hoveredZone"
+          [ngStyle]="{ top: tooltipY + 'px', left: tooltipX + 'px'}">
+          {{hoveredZone}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
