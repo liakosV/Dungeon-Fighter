@@ -6,7 +6,7 @@ import java.util.UUID;
 
 @Data
 public class PlayerReadOnlyDto {
-    private Long id;
+//    private Long id;
     private UUID uuid;
     private String name;
     private String playerClassName;
