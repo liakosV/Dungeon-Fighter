@@ -1,4 +1,4 @@
-package gr.project.dungeonFighter.dto;
+package gr.project.dungeonFighter.dto.user;
 
 import gr.project.dungeonFighter.model.static_data.enums.Role;
 import jakarta.validation.constraints.Email;
