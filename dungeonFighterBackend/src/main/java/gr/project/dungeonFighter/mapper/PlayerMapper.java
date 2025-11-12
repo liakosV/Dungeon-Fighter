@@ -1,7 +1,7 @@
 package gr.project.dungeonFighter.mapper;
 
-import gr.project.dungeonFighter.dto.PlayerInsertDto;
-import gr.project.dungeonFighter.dto.PlayerReadOnlyDto;
+import gr.project.dungeonFighter.dto.player.PlayerInsertDto;
+import gr.project.dungeonFighter.dto.player.PlayerReadOnlyDto;
 import gr.project.dungeonFighter.model.Player;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

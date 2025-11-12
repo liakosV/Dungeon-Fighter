@@ -1,5 +1,6 @@
-package gr.project.dungeonFighter.dto;
+package gr.project.dungeonFighter.dto.player;
 
+import gr.project.dungeonFighter.dto.stats.StatsReadOnlyDto;
 import lombok.Data;
 
 import java.util.UUID;

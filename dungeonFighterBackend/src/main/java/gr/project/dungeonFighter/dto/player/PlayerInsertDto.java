@@ -1,5 +1,6 @@
-package gr.project.dungeonFighter.dto;
+package gr.project.dungeonFighter.dto.player;
 
+import gr.project.dungeonFighter.dto.stats.StatsInsertDto;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
