@@ -1,4 +1,4 @@
-package gr.project.dungeonFighter.dto;
+package gr.project.dungeonFighter.dto.playerClass;
 
 import lombok.Data;
 
