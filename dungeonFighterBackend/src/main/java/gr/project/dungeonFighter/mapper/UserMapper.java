@@ -1,10 +1,10 @@
 package gr.project.dungeonFighter.mapper;
 
-import gr.project.dungeonFighter.dto.UserInsertDto;
-import gr.project.dungeonFighter.dto.UserReadOnlyDto;
+import gr.project.dungeonFighter.dto.user.UserInsertDto;
+import gr.project.dungeonFighter.dto.user.UserReadOnlyDto;
+import gr.project.dungeonFighter.dto.user.UserUpdateDto;
 import gr.project.dungeonFighter.model.User;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
+import org.mapstruct.*;
 
 @Mapper(componentModel = "spring", uses = PlayerMapper.class)
 public interface UserMapper {
@@ -15,4 +15,7 @@ public interface UserMapper {
     @Mapping(target = "role", expression = "java(Role.valueOf(dto.getRoleName().toUpperCase()))")
     @Mapping(target = "player", ignore = true)
     User toEntity(UserInsertDto dto);
+
+    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+    void toUpdateEntity(UserUpdateDto dto, @MappingTarget User entity);
 }
