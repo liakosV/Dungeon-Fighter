@@ -10,4 +10,6 @@ public interface PlayerRepository extends JpaRepository<Player, Long> {
 
     Optional<Player> findByUuid(UUID uuid);
     Optional<Player> findByName(String name);
+
+    boolean existsByPlayerClassUuid(UUID uuid);
 }
