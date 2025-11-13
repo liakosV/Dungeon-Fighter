@@ -6,24 +6,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity
+@Embeddable
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Stats {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private int strength;
-    private int intelligence;
-    private int stamina;
-    private int dexterity;
-    private int defense;
-
-    @OneToOne(mappedBy = "stats", fetch = FetchType.LAZY)
-    private Player player;
-
+    private Integer strength = 0;
+    private Integer intelligence = 0;
+    private Integer stamina = 0;
+    private Integer dexterity = 0;
+    private Integer defense = 0;
 }
