@@ -1,6 +1,6 @@
 package gr.project.dungeonFighter.dto.player;
 
-import gr.project.dungeonFighter.dto.stats.StatsInsertDto;
+import gr.project.dungeonFighter.dto.stats.StatsDto;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -15,6 +15,6 @@ public class PlayerInsertDto {
     private String playerClassName;
 
     @NotNull(message = "Stats must not be null.")
-    private StatsInsertDto statsInsertDto;
+    private StatsDto stats;
 
 }
