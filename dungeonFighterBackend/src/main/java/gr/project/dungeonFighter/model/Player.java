@@ -14,13 +14,11 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Player {
+public class Player extends AbstractEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private UUID uuid = UUID.randomUUID();
 
     @Column(unique = true, nullable = false)
     private String name;
@@ -38,7 +36,6 @@ public class Player {
     @JoinColumn(name = "player_class_id")
     private PlayerClass playerClass;
 
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "stats_id")
+    @Embedded
     private Stats stats;
 }
