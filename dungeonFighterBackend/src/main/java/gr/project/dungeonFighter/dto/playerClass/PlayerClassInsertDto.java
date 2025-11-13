@@ -1,6 +1,8 @@
 package gr.project.dungeonFighter.dto.playerClass;
 
+import gr.project.dungeonFighter.dto.stats.StatsDto;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
@@ -12,6 +14,6 @@ public class PlayerClassInsertDto {
     @NotEmpty(message = "The description cannot be empty.")
     private String description;
 
-    @NotEmpty(message = "The class type cannot be empty.")
-    private String classType;
+    @NotNull(message = "The stats must not be null.")
+    private StatsDto stats;
 }
