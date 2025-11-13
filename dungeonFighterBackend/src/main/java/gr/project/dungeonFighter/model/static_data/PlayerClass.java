@@ -1,6 +1,7 @@
 package gr.project.dungeonFighter.model.static_data;
 
-import gr.project.dungeonFighter.model.static_data.enums.ClassType;
+import gr.project.dungeonFighter.model.AbstractEntity;
+import gr.project.dungeonFighter.model.Stats;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,7 +13,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class PlayerClass {
+public class PlayerClass extends AbstractEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,6 +24,6 @@ public class PlayerClass {
 
     private String description;
 
-    @Enumerated(value = EnumType.STRING)
-    private ClassType type;
+    @Embedded
+    private Stats baseStats;
 }
