@@ -13,6 +13,6 @@ public interface PlayerMapper {
     PlayerReadOnlyDto toReadOnlyDto(Player player);
 
     @Mapping(target = "playerClass", ignore = true)
-    @Mapping(target = "stats", source = "statsInsertDto")
+    @Mapping(target = "stats", source = "stats")
     Player toEntity(PlayerInsertDto dto);
 }
