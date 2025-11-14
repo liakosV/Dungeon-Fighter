@@ -1,4 +1,4 @@
-package gr.project.dungeonFighter.model;
+package gr.project.dungeonFighter.model.static_data;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
