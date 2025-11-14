@@ -1,6 +1,5 @@
 package gr.project.dungeonFighter.model;
 
-import gr.project.dungeonFighter.model.static_data.PlayerClass;
 import gr.project.dungeonFighter.model.static_data.enums.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,7 +12,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.UUID;
 
 @Entity
 @Getter
