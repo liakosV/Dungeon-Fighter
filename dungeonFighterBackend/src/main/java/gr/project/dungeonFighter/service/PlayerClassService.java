@@ -7,7 +7,7 @@ import gr.project.dungeonFighter.dto.playerClass.PlayerClassInsertDto;
 import gr.project.dungeonFighter.dto.playerClass.PlayerClassReadOnlyDto;
 import gr.project.dungeonFighter.dto.playerClass.PlayerClassUpdateDto;
 import gr.project.dungeonFighter.mapper.PlayerClassMapper;
-import gr.project.dungeonFighter.model.static_data.PlayerClass;
+import gr.project.dungeonFighter.model.PlayerClass;
 import gr.project.dungeonFighter.repository.PlayerClassRepository;
 import gr.project.dungeonFighter.repository.PlayerRepository;
 import lombok.RequiredArgsConstructor;
