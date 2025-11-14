@@ -6,13 +6,19 @@ import gr.project.dungeonFighter.model.Player;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper(componentModel = "spring", uses = StatsMapper.class)
+@Mapper(componentModel = "spring", uses = {StatsMapper.class, PlayerClassMapper.class})
 public interface PlayerMapper {
 
-    @Mapping(target = "playerClassName", expression = "java(player.getPlayerClass().getName())")
     PlayerReadOnlyDto toReadOnlyDto(Player player);
 
     @Mapping(target = "playerClass", ignore = true)
-    @Mapping(target = "stats", source = "stats")
+    @Mapping(target = "user", ignore = true)
+    @Mapping(target = "stats", ignore = true)
+    @Mapping(target = "level", ignore = true)
+    @Mapping(target = "xp", ignore = true)
+    @Mapping(target = "gold", ignore = true)
+    @Mapping(target = "uuid", ignore = true)
+    @Mapping(target = "createdAt", ignore = true)
+    @Mapping(target = "updatedAt", ignore = true)
     Player toEntity(PlayerInsertDto dto);
 }
