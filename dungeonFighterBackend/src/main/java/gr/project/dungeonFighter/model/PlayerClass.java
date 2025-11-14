@@ -1,7 +1,7 @@
-package gr.project.dungeonFighter.model.static_data;
+package gr.project.dungeonFighter.model;
 
-import gr.project.dungeonFighter.model.AbstractEntity;
-import gr.project.dungeonFighter.model.Stats;
+import gr.project.dungeonFighter.model.static_data.Stats;
+import gr.project.dungeonFighter.model.static_data.StatsGrowth;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,4 +26,7 @@ public class PlayerClass extends AbstractEntity {
 
     @Embedded
     private Stats baseStats;
+
+    @Embedded
+    private StatsGrowth growth;
 }
