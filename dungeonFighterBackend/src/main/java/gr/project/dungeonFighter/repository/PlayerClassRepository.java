@@ -1,6 +1,6 @@
 package gr.project.dungeonFighter.repository;
 
-import gr.project.dungeonFighter.model.static_data.PlayerClass;
+import gr.project.dungeonFighter.model.PlayerClass;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
