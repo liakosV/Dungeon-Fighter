@@ -1,6 +1,7 @@
 package gr.project.dungeonFighter.repository;
 
 import gr.project.dungeonFighter.model.Player;
+import gr.project.dungeonFighter.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
@@ -12,4 +13,5 @@ public interface PlayerRepository extends JpaRepository<Player, Long> {
     Optional<Player> findByName(String name);
 
     boolean existsByPlayerClassUuid(UUID uuid);
+    boolean existsByUser(User user);
 }
