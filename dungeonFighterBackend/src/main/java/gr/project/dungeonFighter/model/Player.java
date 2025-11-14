@@ -1,13 +1,11 @@
 package gr.project.dungeonFighter.model;
 
-import gr.project.dungeonFighter.model.static_data.PlayerClass;
+import gr.project.dungeonFighter.model.static_data.Stats;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.UUID;
 
 @Entity
 @Getter
@@ -38,4 +36,7 @@ public class Player extends AbstractEntity{
 
     @Embedded
     private Stats stats;
+
+    @ManyToOne(optional = false)
+    private User user;
 }
