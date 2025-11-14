@@ -14,7 +14,4 @@ public class PlayerInsertDto {
     @NotNull(message = "The class cannot be null.")
     private String playerClassName;
 
-    @NotNull(message = "Stats must not be null.")
-    private StatsDto stats;
-
 }
